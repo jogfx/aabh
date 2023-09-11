@@ -1,11 +1,18 @@
 import streamlit as st
 import pandas as pd
+import gdown
 
-# Define the URL of the CSV file in your GitHub repository
-csv_url = "https://raw.githubusercontent.com/jogfx/aabh/main/Keyholders.csv"
+# Define the Google Drive file URL
+google_drive_url = "https://drive.google.com/your_file_url_here"
 
-# Load the Keyholders data
-keyholders = pd.read_csv(csv_url, delimiter=';')
+# Define the destination file path where the downloaded file will be saved
+destination_path = "Keyholders.csv"
+
+# Download the file from Google Drive using gdown
+gdown.download(google_drive_url, destination_path, quiet=False)
+
+# Load the downloaded data using pandas
+keyholders = pd.read_csv(destination_path, delimiter=';')
 
 # links to Google Sheets
 google_sheets_links = {
