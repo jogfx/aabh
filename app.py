@@ -74,5 +74,4 @@ columns = st.columns(3)
 # Display predefined links
 for link_label, link_url in useful_links.items():
     columns[0].write(link_label)
-    columns[1].write(":")
-    columns[2].markdown(f"[{link_label}]({link_url})", unsafe_allow_html=True)
+    columns[1].markdown(f"[{link_label}]({link_url})", unsafe_allow_html=True)
