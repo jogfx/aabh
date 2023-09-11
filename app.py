@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Define the URL of the Excel file in your GitHub repository
-excel_url = "https://github.com/jogfx/aabh/raw/main/Keyholders.xlsx"
+excel_url = "https://raw.githubusercontent.com/jogfx/aabh/main/Keyholders.csv"
 
 # Load the Keyholders data
 keyholders = pd.read_excel(excel_url)
