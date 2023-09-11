@@ -33,7 +33,7 @@ useful_links = {
 }
 
 # Streamlit App
-st.title("Dashboard")
+st.title("Aalborghus Kollegiet")
 
 # Section 1: Keyholders
 st.header("Keyholders")
