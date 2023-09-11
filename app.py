@@ -1,19 +1,11 @@
 import streamlit as st
 import pandas as pd
-import gdown
 
-# Define the Google Drive file URL and File ID
-drive_file_url = "https://docs.google.com/spreadsheets/d/1UbUGlxA2_PINKS-6N25EVunE-jO_g83HOJR--IXW8f8/edit?usp=drive_link"
-file_id = "1UbUGlxA2_PINKS-6N25EVunE-jO_g83HOJR--IXW8f8"
-
-# Define the destination file path (where you want to save the downloaded file)
-destination_file_path = "keyholders.xlsx"
-
-# Download the file from Google Drive
-gdown.download(drive_file_url, destination_file_path, quiet=False)
+# Define the URL of the Excel file in your GitHub repository
+excel_url = "https://github.com/jogfx/aabh/raw/main/Keyholders.xlsx"
 
 # Load the Keyholders data
-keyholders = pd.read_excel(destination_file_path)
+keyholders = pd.read_excel(excel_url)
 
 # links to Google Sheets
 google_sheets_links = {
