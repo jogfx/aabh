@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 
-# Define the URL of the Excel file in your GitHub repository
-excel_url = "https://raw.githubusercontent.com/jogfx/aabh/main/Keyholders.csv"
+# Define the URL of the CSV file in your GitHub repository
+csv_url = "https://raw.githubusercontent.com/jogfx/aabh/main/Keyholders.csv"
 
 # Load the Keyholders data
-keyholders = pd.read_csv(excel_url, delimiter=';')
+keyholders = pd.read_csv(csv_url, delimiter=';')
 
 # links to Google Sheets
 google_sheets_links = {
@@ -32,13 +32,13 @@ st.title("Dashboard")
 st.header("Keyholders")
 
 # Get unique types of keys
-unique_key_types = keyholders["Key"].unique()
+unique_key_types = keyholders["Type of key"].unique()
 
 # Iterate over each unique type of key and create an expander block
 for key_type in unique_key_types:
     with st.expander(f"{key_type} Keyholders"):
         # Filter keyholders by the current key type
-        keyholders_filtered = keyholders[keyholders["Key"] == key_type]
+        keyholders_filtered = keyholders[keyholders["Type of key"] == key_type]
         
         # Display a list of people with clickable Facebook links and Room
         for index, row in keyholders_filtered.iterrows():
@@ -68,4 +68,4 @@ columns = st.columns(3)
 for link_label, link_url in useful_links.items():
     columns[0].write(link_label)
     columns[1].write(":")
-    columns[2].markdown(f"[{link_url}]({link_url})", unsafe_allow_html=True)
+    columns[2].markdown(f"[{link_label}]({link_url})", unsafe_allow_html=True)
