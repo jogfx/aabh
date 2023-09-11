@@ -32,13 +32,13 @@ st.title("Dashboard")
 st.header("Keyholders")
 
 # Get unique types of keys
-unique_key_types = keyholders["Type of key"].unique()
+unique_key_types = keyholders["Key"].unique()
 
 # Iterate over each unique type of key and create an expander block
 for key_type in unique_key_types:
     with st.expander(f"{key_type} Keyholders"):
         # Filter keyholders by the current key type
-        keyholders_filtered = keyholders[keyholders["Type of key"] == key_type]
+        keyholders_filtered = keyholders[keyholders["Key"] == key_type]
         
         # Display a list of people with clickable Facebook links and Room
         for index, row in keyholders_filtered.iterrows():
