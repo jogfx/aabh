@@ -12,7 +12,7 @@ destination_path = "Keyholders.csv"
 gdown.download(google_drive_url, destination_path, quiet=False)
 
 # Load the downloaded data using pandas
-keyholders = pd.read_csv(destination_path, delimiter=';')
+keyholders = pd.read_csv(destination_path, delimiter=';', encoding='utf-8')
 
 # links to Google Sheets
 google_sheets_links = {
