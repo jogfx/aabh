@@ -3,7 +3,7 @@ import pandas as pd
 import gdown
 
 # Define the Google Drive file URL
-google_drive_url = "https://drive.google.com/file/d/1jSSzaJbwe91YvJiLg-sCvZMT4-sRvThx/view?usp=drive_link"
+google_drive_url = "https://drive.google.com/uc?id=1jSSzaJbwe91YvJiLg-sCvZMT4-sRvThx"
 
 # Define the destination file path where the downloaded file will be saved
 destination_path = "Keyholders.csv"
@@ -12,7 +12,7 @@ destination_path = "Keyholders.csv"
 gdown.download(google_drive_url, destination_path, quiet=False)
 
 # Load the downloaded data using pandas
-keyholders = pd.read_csv(destination_path, delimiter=';', encoding='utf-8')
+keyholders = pd.read_csv(destination_path, delimiter=';')
 
 # links to Google Sheets
 google_sheets_links = {
