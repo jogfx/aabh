@@ -5,7 +5,7 @@ import pandas as pd
 excel_url = "https://raw.githubusercontent.com/jogfx/aabh/main/Keyholders.csv"
 
 # Load the Keyholders data
-keyholders = pd.read_csv(excel_url)
+keyholders = pd.read_csv(excel_url, delimiter=';')
 
 # links to Google Sheets
 google_sheets_links = {
