@@ -52,7 +52,6 @@ for key_type in unique_key_types:
         for index, row in keyholders_filtered.iterrows():
             st.write(f"{row['Name']} - [Facebook]({row['Facebook']}) | Room: {row['Room']}", unsafe_allow_html=True)
 
-
 # Section 2: Links to Google Sheets
 st.header("Links to booking calendars")
 
