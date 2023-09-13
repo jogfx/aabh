@@ -30,6 +30,7 @@ pdfs = {
 # Useful Links
 useful_links = {
     "Aalborghus Kollegiet facebook group": "https://www.facebook.com/groups/8666890873",
+    "Tenant meeting summaries": "work in progress"
 }
 
 # Streamlit App
