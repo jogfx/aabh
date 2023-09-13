@@ -3,7 +3,7 @@ import pandas as pd
 import gdown
 
 # Define the Google Drive file URL
-google_drive_url = "https://docs.google.com/spreadsheets/d/1UbUGlxA2_PINKS-6N25EVunE-jO_g83HOJR--IXW8f8/edit?usp=sharing"
+google_drive_url = "https://drive.usercontent.google.com/download?id=1jSSzaJbwe91YvJiLg-sCvZMT4-sRvThx&export=download&authuser=0&confirm=t&uuid=f6db6e50-440a-4b60-bb8e-c74a15c4461b&at=APZUnTU4EQQojw2uHhmzj-vsMQeZ:1694604212997"
 
 # Define the destination file path where the downloaded file will be saved
 destination_path = "Keyholders.csv"
@@ -12,7 +12,7 @@ destination_path = "Keyholders.csv"
 gdown.download(google_drive_url, destination_path, quiet=False)
 
 # Load the downloaded data using pandas
-keyholders = pd.read_csv(destination_path, delimiter=';')
+keyholders = pd.read_csv(destination_path, delimiter=";")
 
 # links to Google Sheets
 google_sheets_links = {
@@ -42,7 +42,7 @@ st.header("Keyholders")
 # Get unique types of keys
 unique_key_types = keyholders["Type of key"].unique()
 
-# Iterate over each unique type of key and create an expander block
+# Iterate over each unique type of key and create an expander blockstre
 for key_type in unique_key_types:
     with st.expander(f"{key_type} Keyholders"):
         # Filter keyholders by the current key type
@@ -51,6 +51,7 @@ for key_type in unique_key_types:
         # Display a list of people with clickable Facebook links and Room
         for index, row in keyholders_filtered.iterrows():
             st.write(f"{row['Name']} - [Facebook]({row['Facebook']}) | Room: {row['Room']}", unsafe_allow_html=True)
+
 
 # Section 2: Links to Google Sheets
 st.header("Links to booking calendars")
