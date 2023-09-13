@@ -3,7 +3,7 @@ import pandas as pd
 import gdown
 
 # Define the Google Drive file URL
-google_drive_url = "https://drive.google.com/uc?id=1jSSzaJbwe91YvJiLg-sCvZMT4-sRvThx"
+google_drive_url = "https://docs.google.com/spreadsheets/d/1UbUGlxA2_PINKS-6N25EVunE-jO_g83HOJR--IXW8f8/edit?usp=sharing"
 
 # Define the destination file path where the downloaded file will be saved
 destination_path = "Keyholders.csv"
