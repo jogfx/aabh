@@ -53,7 +53,7 @@ for key_type in unique_key_types:
             st.write(f"{row['Name']} - [Facebook]({row['Facebook']}) | Room: {row['Room']}", unsafe_allow_html=True)
 
 # Section 2: Links to Google Sheets
-st.header("Links to booking calendars")
+st.header("Links to booking calendars - contact keyholders to book")
 
 # Display all Google Sheets links as clickable hyperlinks
 for sheet_name, sheet_link in google_sheets_links.items():
